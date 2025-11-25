@@ -43,6 +43,25 @@ public class PocDesignePatternsApplication {
      * @param args command-line arguments passed during application startup
      */
     public static void main(String[] args) {
-        SpringApplication.run(PocDesignePatternsApplication.class, args);
+        System.out.println("=== Single notifier ===");
+        Notifier email = new EmailNotifier();
+        email.send("Welcome user!");
+
+        System.out.println("\n=== Email + SMS ===");
+        Notifier emailSms = new SMSNotifier(new EmailNotifier());
+        emailSms.send("Your account was created!");
+
+        System.out.println("\n=== Email + Slack + SMS ===");
+        Notifier fullStack =
+                new SMSNotifier(
+                        new SlackNotifier(
+                                new EmailNotifier()
+                        )
+                );
+        fullStack.send("A new login was detected!");
+
+        System.out.println("\n=== Email + Push ===");
+        Notifier emailPush = new PushNotifier(new EmailNotifier());
+        emailPush.send("You received a new message!");
     }
 }
