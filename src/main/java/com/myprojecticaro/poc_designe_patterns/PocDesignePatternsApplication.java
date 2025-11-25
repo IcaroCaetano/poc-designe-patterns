@@ -3,7 +3,7 @@ package com.myprojecticaro.poc_designe_patterns;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-import com.myprojecticaro.poc_designe_patterns.structural.decorator;
+import com.myprojecticaro.poc_designe_patterns.structural.decorator.*;
 
 /**
  * Main entry point for the Design Patterns Proof of Concept (POC) application.
