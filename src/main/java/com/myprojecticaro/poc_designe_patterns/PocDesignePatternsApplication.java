@@ -45,25 +45,12 @@ public class PocDesignePatternsApplication {
      * @param args command-line arguments passed during application startup
      */
     public static void main(String[] args) {
-        System.out.println("=== Single notifier ===");
+
+        // Decorator
         Notifier email = new EmailNotifier();
-        email.send("Welcome user!");
-
-        System.out.println("\n=== Email + SMS ===");
-        Notifier emailSms = new SMSNotifier(new EmailNotifier());
-        emailSms.send("Your account was created!");
-
-        System.out.println("\n=== Email + Slack + SMS ===");
-        Notifier fullStack =
-                new SMSNotifier(
-                        new SlackNotifier(
-                                new EmailNotifier()
-                        )
-                );
-        fullStack.send("A new login was detected!");
-
-        System.out.println("\n=== Email + Push ===");
-        Notifier emailPush = new PushNotifier(new EmailNotifier());
-        emailPush.send("You received a new message!");
+        Notifier emailAndSms = new SMSNotifier(email);
+        Notifier emailSmsSlack = new SlackNotifier(emailAndSms);
+        Notifier fullNotifier = new PushNotifier(emailSmsSlack);
+        fullNotifier.send("Your order has been shipped!");
     }
 }
