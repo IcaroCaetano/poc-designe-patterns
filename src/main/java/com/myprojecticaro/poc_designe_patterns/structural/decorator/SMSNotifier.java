@@ -9,6 +9,6 @@ public class SMSNotifier extends BaseDecorator {
     @Override
     public void send(String message) {
         super.send(message);
-        System.out.println("📱 Sending SMS: " + message);
+        System.out.println("Sending SMS: " + message);
     }
 }
