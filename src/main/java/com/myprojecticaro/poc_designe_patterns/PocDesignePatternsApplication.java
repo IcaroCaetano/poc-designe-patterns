@@ -8,10 +8,11 @@ import com.myprojecticaro.poc_designe_patterns.structural.decorator.BaseDecorato
 import com.myprojecticaro.poc_designe_patterns.structural.decorator.SMSNotifier;
 import com.myprojecticaro.poc_designe_patterns.structural.decorator.SlackNotifier;
 import com.myprojecticaro.poc_designe_patterns.structural.decorator.PushNotifier;
-
 import com.myprojecticaro.poc_designe_patterns.structural.decorator.ExpensiveService;
 import com.myprojecticaro.poc_designe_patterns.structural.decorator.ExpensiveServiceImpl;
 import com.myprojecticaro.poc_designe_patterns.structural.decorator.CacheDecorator;
+
+import com.myprojecticaro.poc_designe_patterns.behavioral.strategy.payment.*;
 
 /**
  * Main entry point for the Design Patterns Proof of Concept (POC) application.
@@ -64,5 +65,15 @@ public class PocDesignePatternsApplication {
         ExpensiveService service = new CacheDecorator(new ExpensiveServiceImpl());
         System.out.println(service.calculate(2));
         System.out.println(service.calculate(2))
+
+        // Strategy — Payments
+        PaymentContext payment = new PaymentContext(new PixPayment());
+        payment.executePayment(150.00);
+        
+        payment.setStrategy(new CreditCardPayment());
+        payment.executePayment(500.00);
+        
+        payment.setStrategy(new BoletoPayment());
+        payment.executePayment(80.00);    
     }
 }
