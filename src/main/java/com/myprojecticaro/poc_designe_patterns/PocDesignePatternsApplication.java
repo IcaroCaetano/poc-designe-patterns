@@ -3,7 +3,15 @@ package com.myprojecticaro.poc_designe_patterns;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-import com.myprojecticaro.poc_designe_patterns.structural.decorator.*;
+import com.myprojecticaro.poc_designe_patterns.structural.decorator.Notifier;
+import com.myprojecticaro.poc_designe_patterns.structural.decorator.EmailNotifier;
+import com.myprojecticaro.poc_designe_patterns.structural.decorator.SMSNotifier;
+import com.myprojecticaro.poc_designe_patterns.structural.decorator.SlackNotifier;
+import com.myprojecticaro.poc_designe_patterns.structural.decorator.PushNotifier;
+
+import com.myprojecticaro.poc_designe_patterns.structural.decorator.ExpensiveService;
+import com.myprojecticaro.poc_designe_patterns.structural.decorator.ExpensiveServiceImpl;
+import com.myprojecticaro.poc_designe_patterns.structural.decorator.CacheDecorator;
 
 /**
  * Main entry point for the Design Patterns Proof of Concept (POC) application.
