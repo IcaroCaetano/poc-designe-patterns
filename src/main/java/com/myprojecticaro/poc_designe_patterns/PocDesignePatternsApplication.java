@@ -4,7 +4,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import com.myprojecticaro.poc_designe_patterns.structural.decorator.Notifier;
-import com.myprojecticaro.poc_designe_patterns.structural.decorator.EmailNotifier;
+import com.myprojecticaro.poc_designe_patterns.structural.decorator.BaseDecorator;
 import com.myprojecticaro.poc_designe_patterns.structural.decorator.SMSNotifier;
 import com.myprojecticaro.poc_designe_patterns.structural.decorator.SlackNotifier;
 import com.myprojecticaro.poc_designe_patterns.structural.decorator.PushNotifier;
@@ -55,7 +55,7 @@ public class PocDesignePatternsApplication {
     public static void main(String[] args) {
 
         // Decorator
-        Notifier email = new EmailNotifier();
+        Notifier email = new BaseDecorator();
         Notifier emailAndSms = new SMSNotifier(email);
         Notifier emailSmsSlack = new SlackNotifier(emailAndSms);
         Notifier fullNotifier = new PushNotifier(emailSmsSlack);
