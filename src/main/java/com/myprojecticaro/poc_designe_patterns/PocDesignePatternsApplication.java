@@ -52,5 +52,9 @@ public class PocDesignePatternsApplication {
         Notifier emailSmsSlack = new SlackNotifier(emailAndSms);
         Notifier fullNotifier = new PushNotifier(emailSmsSlack);
         fullNotifier.send("Your order has been shipped!");
+
+        ExpensiveService service = new CacheDecorator(new ExpensiveServiceImpl());
+        System.out.println(service.calculate(2));
+        System.out.println(service.calculate(2))
     }
 }
