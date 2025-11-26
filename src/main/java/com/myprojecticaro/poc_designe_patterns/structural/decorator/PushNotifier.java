@@ -9,6 +9,6 @@ public class PushNotifier extends BaseDecorator {
     @Override
     public void send(String message) {
         super.send(message);
-        System.out.println("🔔 Sending PUSH NOTIFICATION: " + message);
+        System.out.println("Sending PUSH NOTIFICATION: " + message);
     }
 }
