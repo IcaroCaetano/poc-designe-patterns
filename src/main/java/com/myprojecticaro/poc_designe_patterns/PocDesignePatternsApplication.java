@@ -66,7 +66,7 @@ public class PocDesignePatternsApplication {
         System.out.println(service.calculate(2));
         System.out.println(service.calculate(2))
 
-        // Strategy — Payments
+        // Strategy
         PaymentContext payment = new PaymentContext(new PixPayment());
         payment.executePayment(150.00);
         
