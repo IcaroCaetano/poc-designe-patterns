@@ -66,6 +66,16 @@ public class PocDesignePatternsApplication {
         System.out.println(service.calculate(2));
         System.out.println(service.calculate(2))
 
+        // factory
+        TransportCreator carCreator = new CarTransportCreator();
+        carCreator.planDelivery();
+
+        TransportCreator bikeCreator = new BikeTransportCreator();
+        bikeCreator.planDelivery();
+
+        TransportCreator truckCreator = new TruckTransportCreator();
+        truckCreator.planDelivery();
+
         // Strategy
         PaymentContext payment = new PaymentContext(new PixPayment());
         payment.executePayment(150.00);
