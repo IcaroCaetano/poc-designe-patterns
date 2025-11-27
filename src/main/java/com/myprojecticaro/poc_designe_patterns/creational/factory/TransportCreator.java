@@ -1,8 +1,7 @@
-package creational.factorymethod.transport;
+package com.myprojecticaro.poc_designe_patterns.creational.factory;
 
 public abstract class TransportCreator {
 
-    // Factory Method
     public abstract Transport createTransport();
 
     public void planDelivery() {
