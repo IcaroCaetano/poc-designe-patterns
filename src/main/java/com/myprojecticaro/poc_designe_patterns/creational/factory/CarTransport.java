@@ -1,4 +1,4 @@
-package creational.factory;
+package com.myprojecticaro.poc_designe_patterns.creational.factory;
 
 public class CarTransport implements Transport {
     @Override
