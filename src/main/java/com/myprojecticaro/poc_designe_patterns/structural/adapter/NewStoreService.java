@@ -9,7 +9,7 @@ public class NewStoreService {
     }
 
     public void checkout(double price) {
-        System.out.println("Novo sistema iniciando checkout...");
+        System.out.println("New system starting checkout...");
         paymentProcessor.processPayment(price);
     }
 }
