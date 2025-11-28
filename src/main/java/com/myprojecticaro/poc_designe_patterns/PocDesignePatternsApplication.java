@@ -59,6 +59,13 @@ public class PocDesignePatternsApplication {
         System.out.println(service.calculate(2));
         System.out.println(service.calculate(2))
 
+        // adapter
+        OldPaymentGateway legacyGateway = new OldPaymentGateway();
+        PaymentProcessor processor = new PaymentAdapter(legacyGateway);
+        NewStoreService store = new NewStoreService(processor);
+        
+        store.checkout(199.90);
+
         // factory
         TransportCreator carCreator = new CarTransportCreator();
         carCreator.planDelivery();
