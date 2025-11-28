@@ -4,6 +4,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import com.myprojecticaro.poc_designe_patterns.structural.decorator.*;
+import com.myprojecticaro.poc_designe_patterns.structural.adapter.*;
 import com.myprojecticaro.poc_designe_patterns.behavioral.strategy.*;
 import com.myprojecticaro.poc_designe_patterns.creational.builder.*;
 
