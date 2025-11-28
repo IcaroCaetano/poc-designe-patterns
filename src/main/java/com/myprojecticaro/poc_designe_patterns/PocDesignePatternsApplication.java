@@ -76,6 +76,15 @@ public class PocDesignePatternsApplication {
         TransportCreator truckCreator = new TruckTransportCreator();
         truckCreator.planDelivery();
 
+        // builder
+        OrderDirector director = new OrderDirector();
+
+        Order onlineOrder = director.createBasicOnlineOrder(new OnlineOrderBuilder());
+        System.out.println(onlineOrder);
+
+        Order expressOrder = director.createExpressOnlineOrder(new OnlineOrderBuilder());
+        System.out.println(expressOrder);
+
         // Strategy
         PaymentContext payment = new PaymentContext(new PixPayment());
         payment.executePayment(150.00);
