@@ -10,7 +10,6 @@ public class PaymentAdapter implements PaymentProcessor {
 
     @Override
     public void processPayment(double value) {
-        // Adaptando para o formato esperado pelo sistema antigo
         legacyGateway.makePayment(value, "BRL");
     }
 }
