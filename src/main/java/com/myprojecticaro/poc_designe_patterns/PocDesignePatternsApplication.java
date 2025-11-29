@@ -95,5 +95,13 @@ public class PocDesignePatternsApplication {
         
         payment.setStrategy(new BoletoPayment());
         payment.executePayment(80.00);    
+
+        // Observer
+        OrderEventSubject orderSubject = new OrderEventSubject();
+        orderSubject.attach(new EmailObserver());
+        orderSubject.attach(new SmsObserver());
+        orderSubject.attach(new FraudAnalysisObserver());
+
+        orderSubject.newOrderPlaced("ORDER-12345");
     }
 }
