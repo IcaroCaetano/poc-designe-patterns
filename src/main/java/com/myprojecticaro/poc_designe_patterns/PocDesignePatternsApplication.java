@@ -103,5 +103,16 @@ public class PocDesignePatternsApplication {
         orderSubject.attach(new FraudAnalysisObserver());
 
         orderSubject.newOrderPlaced("ORDER-12345");
+
+        // Chain
+        Request r = new Request("12345678901");
+        
+        Handler chain = new ValidateCpfHandler();
+        chain
+           .setNext(new ValidateDocumentHandler())
+           .setNext(new FraudScoreHandler())
+           .setNext(new FinalApprovalHandler());
+
+        chain.handle(r);
     }
 }
