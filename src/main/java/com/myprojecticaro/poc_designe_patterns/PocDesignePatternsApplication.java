@@ -2,11 +2,10 @@ package com.myprojecticaro.poc_designe_patterns;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import com.myprojecticaro.poc_designe_patterns.structural.*;
+import com.myprojecticaro.poc_designe_patterns.Behavioral.*;
+import com.myprojecticaro.poc_designe_patterns.creational.*;
 
-import com.myprojecticaro.poc_designe_patterns.structural.decorator.*;
-import com.myprojecticaro.poc_designe_patterns.structural.adapter.*;
-import com.myprojecticaro.poc_designe_patterns.behavioral.strategy.*;
-import com.myprojecticaro.poc_designe_patterns.creational.builder.*;
 
 /**
  * Main entry point for the Design Patterns Proof of Concept (POC) application.
