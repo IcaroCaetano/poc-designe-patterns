@@ -1,6 +1,7 @@
 package com.myprojecticaro.poc_designe_patterns.behavioral.chain;
 
 public class Request {
+    
     private final String cpf;
     private boolean documentValid;
     private int fraudScore;
