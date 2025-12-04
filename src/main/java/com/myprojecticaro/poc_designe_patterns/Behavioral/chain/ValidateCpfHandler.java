@@ -6,9 +6,9 @@ public class ValidateCpfHandler extends AbstractHandler {
     public void handle(Request request) {
         if (request.getCpf() == null || request.getCpf().length() != 11) {
             System.out.println("Invalid CPF!");
-            return; // para a cadeia
+            return;
         }
-        System.out.println("✔ CPF validado.");
+        System.out.println("CPF validated.");
         next(request);
     }
 }
