@@ -113,5 +113,16 @@ public class PocDesignePatternsApplication {
            .setNext(new FinalApprovalHandler());
 
         chain.handle(r);
+
+        // Template Method
+        Request request = new Request();
+
+        System.out.println("---- BASIC FRAUD CHECK ----");
+        AbstractFraudCheck basic = new BasicFraudCheck();
+        basic.process(request);
+
+        System.out.println("\n---- ADVANCED FRAUD CHECK ----");
+        AbstractFraudCheck advanced = new AdvancedFraudCheck();
+        advanced.process(request);
     }
 }
