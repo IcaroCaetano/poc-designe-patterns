@@ -25,7 +25,7 @@ public class OrderEventSubject implements Subject {
     }
 
     public void newOrderPlaced(String orderId) {
-        System.out.println("📦 Pedido criado: " + orderId);
+        System.out.println("Pedido criado: " + orderId);
         notifyObservers("New order created: " + orderId);
     }
 }
