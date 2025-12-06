@@ -4,6 +4,6 @@ public class SmsObserver implements Observer {
 
     @Override
     public void update(String eventMessage) {
-        System.out.println("📱 Sending SMS about event: " + eventMessage);
+        System.out.println("Sending SMS about event: " + eventMessage);
     }
 }
