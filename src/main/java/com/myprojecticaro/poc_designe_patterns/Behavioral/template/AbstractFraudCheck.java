@@ -14,10 +14,10 @@ public abstract class AbstractFraudCheck {
      */
     public final void process(Request request) {
 
-        validateBaseData(request);      // Step 1
-        specificValidation(request);    // Step 2 (variation)
-        calculateRiskScore(request);    // Step 3 (variation)
-        finalDecision(request);         // Step 4
+        validateBaseData(request);      
+        specificValidation(request);
+        calculateRiskScore(request);
+        finalDecision(request);
     }
 
     /**
@@ -42,9 +42,9 @@ public abstract class AbstractFraudCheck {
      */
     protected void finalDecision(Request request) {
         if (request.getFraudScore() > 70) {
-            System.out.println("❌ High risk — Request rejected!");
+            System.out.println("High risk — Request rejected!");
         } else {
-            System.out.println("✅ Request approved.");
+            System.out.println("Request approved.");
         }
     }
 }
