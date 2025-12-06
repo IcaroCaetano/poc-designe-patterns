@@ -10,7 +10,7 @@ public class AdvancedFraudCheck extends AbstractFraudCheck {
     @Override
     protected void calculateRiskScore(Request request) {
         System.out.println("Calculating advanced risk score using ML…");
-        request.setFraudScore(85); // risco alto
+        request.setFraudScore(85);
     }
 }
 
