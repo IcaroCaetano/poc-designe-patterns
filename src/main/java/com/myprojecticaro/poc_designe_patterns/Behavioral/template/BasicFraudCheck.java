@@ -10,7 +10,7 @@ public class BasicFraudCheck extends AbstractFraudCheck {
     @Override
     protected void calculateRiskScore(Request request) {
         System.out.println("Calculating basic fraud score…");
-        request.setFraudScore(30); // baixo risco
+        request.setFraudScore(30);
     }
 }
 
