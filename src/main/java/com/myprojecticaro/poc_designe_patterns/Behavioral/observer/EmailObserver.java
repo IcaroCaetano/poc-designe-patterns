@@ -4,6 +4,6 @@ public class EmailObserver implements Observer {
 
     @Override
     public void update(String eventMessage) {
-        System.out.println("📧 Sending EMAIL about event: " + eventMessage);
+        System.out.println("Sending EMAIL about event: " + eventMessage);
     }
 }
