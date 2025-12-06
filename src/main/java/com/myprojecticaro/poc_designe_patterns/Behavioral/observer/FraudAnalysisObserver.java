@@ -4,7 +4,7 @@ public class FraudAnalysisObserver implements Observer {
 
     @Override
     public void update(String eventMessage) {
-        System.out.println("🛑 Running FRAUD ANALYSIS for event: " + eventMessage);
+        System.out.println("Running FRAUD ANALYSIS for event: " + eventMessage);
     }
 }
 
