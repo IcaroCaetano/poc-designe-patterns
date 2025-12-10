@@ -122,5 +122,26 @@ public class PocDesignePatternsApplication {
 
         AbstractFraudCheck advanced = new AdvancedFraudCheck();
         advanced.process(request);
+
+        // Command
+
+        Notifier notifier = new SMSNotifier(
+                                new SlackNotifier(
+                                    new EmailNotifier(
+                                        new Notifier() {
+                                            @Override
+                                            public void send(String message) {
+                                                System.out.println("Base NOTIFIER: " + message);
+                                            }
+                                        })));
+
+        Command sendWelcome = new SendNotificationCommand(notifier, "Welcome!");
+        Command sendAlert = new SendNotificationCommand(notifier, "Security alert!");
+
+        CommandInvoker invoker = new CommandInvoker();
+        invoker.addCommand(sendWelcome);
+        invoker.addCommand(sendAlert);
+
+        invoker.executeAll();
     }
 }
