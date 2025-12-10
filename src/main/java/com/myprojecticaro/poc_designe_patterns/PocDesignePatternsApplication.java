@@ -127,7 +127,7 @@ public class PocDesignePatternsApplication {
 
         Notifier notifier = new SMSNotifier(
                                 new SlackNotifier(
-                                    new EmailNotifier(
+                                    new PushNotifier(
                                         new Notifier() {
                                             @Override
                                             public void send(String message) {
