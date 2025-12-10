@@ -124,7 +124,6 @@ public class PocDesignePatternsApplication {
         advanced.process(request);
 
         // Command
-
         Notifier notifier = new SMSNotifier(
                                 new SlackNotifier(
                                     new PushNotifier(
