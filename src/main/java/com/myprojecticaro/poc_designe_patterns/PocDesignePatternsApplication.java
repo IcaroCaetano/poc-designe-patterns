@@ -66,6 +66,15 @@ public class PocDesignePatternsApplication {
         
         store.checkout(199.90);
 
+        // proxy 
+        ExpensiveOperation service = new ExpensiveOperationProxy();
+
+        System.out.println("First call...");
+        System.out.println(service.execute(5));
+
+        System.out.println("Second call...");
+        System.out.println(service.execute(5));
+
         // factory
         TransportCreator carCreator = new CarTransportCreator();
         carCreator.planDelivery();
