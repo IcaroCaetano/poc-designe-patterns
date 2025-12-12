@@ -75,6 +75,10 @@ public class PocDesignePatternsApplication {
         System.out.println("Second call...");
         System.out.println(service.execute(5));
 
+        // facade
+        OrderFacade facade = new OrderFacade();
+        facade.placeOrder("Icaro", "Notebook Gamer", 7500.0);
+
         // factory
         TransportCreator carCreator = new CarTransportCreator();
         carCreator.planDelivery();
