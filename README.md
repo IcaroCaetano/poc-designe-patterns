@@ -1,6 +1,6 @@
 # Design Patterns
 
-![Descrição da imagem](caminho/para/imagem.png)
+![Descrição da imagem](Design Patterns.png)
 
 ## 🎯 Purpose
 
