@@ -24,6 +24,13 @@ package com.myprojecticaro.poc_designe_patterns.structural.proxy;
  */
 public class ExpensiveOperationImpl implements ExpensiveOperation {
 
+     /**
+     * Executes a simulated heavy computation by sleeping the thread for
+     * 2 seconds and then returning the input multiplied by 10.
+     *
+     * @param value the input value to be processed
+     * @return the computed result (value × 10)
+     */
     @Override
     public int execute(int value) {
         try { Thread.sleep(2000); } catch (InterruptedException ignored) {}
