@@ -1,6 +1,6 @@
 # Design Patterns
 
-![Descrição da imagem](Design Patterns.png)
+![Designe Patterns](docs/Design_Patterns.png)
 
 ## 🎯 Purpose
 
