@@ -1,3 +1,7 @@
+# Design Patterns
+
+![Descrição da imagem](caminho/para/imagem.png)
+
 ## 🎯 Purpose
 
 The Decorator Pattern allows you to:
