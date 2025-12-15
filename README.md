@@ -6,17 +6,15 @@ The main goal of this project is to explore how classic and enterprise design pa
 
 ![Designe Patterns](docs/Design_Patterns.png)
 
-## 🎯 Purpose
+## 🎯 Objectives
 
-The Decorator Pattern allows you to:
+Demonstrate the use of design patterns in Java applications
 
-- Add new responsibilities to an object dynamically
+Apply patterns in a Spring-based environment
 
-- Avoid creating complex inheritance hierarchies
+Improve code readability, maintainability, and extensibility
 
-- Follow the Open/Closed Principle (OCP)
-
-- Compose behaviors at runtime
+Serve as a learning reference and architectural playground
 
 This POC implements a real-world scenario: sending notifications through different channels (SMS, Email, Slack, Push Notification), with the option to combine multiple channels together dynamica
 
