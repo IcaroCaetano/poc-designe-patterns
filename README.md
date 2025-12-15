@@ -18,6 +18,16 @@ Serve as a learning reference and architectural playground
 
 This POC implements a real-world scenario: sending notifications through different channels (SMS, Email, Slack, Push Notification), with the option to combine multiple channels together dynamica
 
+## 🛠️ Technologies
+
+Java 17+ (or compatible LTS version)
+
+Spring Framework / Spring Boot
+
+Maven or Gradle
+
+JUnit / Mockito (optional, for testing)
+
 
 ## ✔ Implemented Classes
 
