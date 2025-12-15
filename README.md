@@ -1,5 +1,9 @@
 # Design Patterns
 
+This repository contains a Proof of Concept (POC) developed with Java and Spring Framework to demonstrate the practical application of software design patterns in a modern, layered, and maintainable architecture.
+
+The main goal of this project is to explore how classic and enterprise design patterns can be applied in real-world scenarios using Spring features such as Dependency Injection, configuration, and inversion of control.
+
 ![Designe Patterns](docs/Design_Patterns.png)
 
 ## 🎯 Purpose
