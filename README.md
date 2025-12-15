@@ -67,9 +67,19 @@ This POC may include (but is not limited to) the following patterns:
 
 - Template Method – Defines a skeleton of an algorithm
 
-- Observer / Publisher-Subscriber – Event-driven communication
+- Observer / Publisher–Subscriber – Event-driven communication
 
 - Command – Encapsulates requests as objects
+
+- Chain of Responsibility – Passes requests along a chain of handlers
+
+- State – Alters behavior when internal state changes
+
+- Mediator – Centralizes complex communication between components
+
+- Iterator – Provides sequential access without exposing internal structure
+
+- Visitor – Separates algorithms from object structures
 
 ### ▶️ How to Run
 
