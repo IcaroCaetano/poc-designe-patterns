@@ -28,19 +28,64 @@ Maven or Gradle
 
 JUnit / Mockito (optional, for testing)
 
+(Optional) Access exposed endpoints via Postman or browser.
 
-## ✔ Implemented Classes
 
-Class	Description
+## 🧩 Design Patterns Covered
 
-Notifier	Base interface defining the notification operation.
+This POC may include (but is not limited to) the following patterns:
 
-EmailNotifier	Concrete notifier that sends notifications via Email.
+### Creational Patterns
 
-SMSNotifier	Concrete notifier that sends notifications via SMS.
+- Factory Method – Encapsulates object creation logic
 
-SlackNotifier	Concrete notifier that sends messages to Slack.
+- Builder – Builds complex objects step by step
 
-PushNotifier	Concrete notifier that sends mobile push notifications.
+- Singleton – Ensures a single instance (managed naturally by Spring Beans)
 
-BaseDecorator	Abstract decorator that implements Notifier and wraps another Notifier.
+### Structural Patterns
+
+- Adapter – Bridges incompatible interfaces
+
+- Facade – Simplifies interaction with complex subsystems
+
+- Decorator – Adds behavior dynamically without modifying the original class
+
+### Behavioral Patterns
+
+- Strategy – Encapsulates interchangeable algorithms
+
+- Template Method – Defines a skeleton of an algorithm
+
+- Observer / Publisher-Subscriber – Event-driven communication
+
+- Command – Encapsulates requests as objects
+
+### ▶️ How to Run
+
+Clone the repository:
+
+````
+git clone https://github.com/your-username/design-patterns-poc.git
+````
+Build the project:
+
+````
+mvn clean install
+````
+
+Run the application:
+
+````
+mvn spring-boot:run
+````
+
+### 📚 References
+
+Design Patterns: Elements of Reusable Object-Oriented Software (GoF)
+
+Spring Framework Documentation
+
+Clean Code – Robert C. Martin
+
+Refactoring Guru – Design Patterns
