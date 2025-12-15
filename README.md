@@ -39,7 +39,11 @@ This POC may include (but is not limited to) the following patterns:
 
 - Factory Method – Encapsulates object creation logic
 
+- Abstract Factory – Creates families of related objects without specifying concrete classes
+
 - Builder – Builds complex objects step by step
+
+- Prototype – Creates new objects by copying existing instances
 
 - Singleton – Ensures a single instance (managed naturally by Spring Beans)
 
@@ -47,9 +51,15 @@ This POC may include (but is not limited to) the following patterns:
 
 - Adapter – Bridges incompatible interfaces
 
+- Bridge – Decouples abstraction from implementation
+
 - Facade – Simplifies interaction with complex subsystems
 
 - Decorator – Adds behavior dynamically without modifying the original class
+
+- Composite – Treats individual objects and compositions uniformly
+
+- Proxy – Controls access to another object (e.g., caching, security, lazy loading)
 
 ### Behavioral Patterns
 
