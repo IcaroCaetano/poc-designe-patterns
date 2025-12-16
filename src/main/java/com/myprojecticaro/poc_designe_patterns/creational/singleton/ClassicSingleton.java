@@ -13,4 +13,8 @@ public class ClassicSingleton {
         }
         return instance;
     }
+
+    public void execute() {
+        System.out.println("Classic Singleton executed");
+    }
 }
