@@ -55,6 +55,17 @@ public class PocDesignePatternsApplication {
         System.out.println(singleton1 == singleton2); 
         singleton1.execute();
 
+        // prototype
+        UserPrototype original = new UserPrototype("Icaro", "ADMIN");
+
+        UserPrototype copy1 = original.clone();
+        UserPrototype copy2 = original.clone();
+    
+        System.out.println(original);
+        System.out.println(copy1);
+        System.out.println(copy2);
+        System.out.println(original == copy1); // false
+
         // Decorator
         Notifier email = new BaseDecorator();
         Notifier emailAndSms = new SMSNotifier(email);
