@@ -1,3 +1,5 @@
+package com.myprojecticaro.poc_designe_patterns.creational.singleton;
+
 public class ClassicSingleton {
 
     private static ClassicSingleton instance;
