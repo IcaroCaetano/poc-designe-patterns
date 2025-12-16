@@ -48,6 +48,13 @@ public class PocDesignePatternsApplication {
      */
     public static void main(String[] args) {
 
+        // singleton
+        ClassicSingleton singleton1 = ClassicSingleton.getInstance();
+        ClassicSingleton singleton2 = ClassicSingleton.getInstance();
+
+        System.out.println(singleton1 == singleton2); 
+        singleton1.execute();
+
         // Decorator
         Notifier email = new BaseDecorator();
         Notifier emailAndSms = new SMSNotifier(email);
