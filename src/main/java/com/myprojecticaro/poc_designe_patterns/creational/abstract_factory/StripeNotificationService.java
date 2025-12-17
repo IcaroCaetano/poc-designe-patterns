@@ -1,4 +1,4 @@
-package com.myprojecticaro.poc_designe_patterns.creational.abstractfactory;
+package com.myprojecticaro.poc_designe_patterns.creational.abstract_factory;
 
 public class StripeNotificationService implements NotificationService {
     @Override
