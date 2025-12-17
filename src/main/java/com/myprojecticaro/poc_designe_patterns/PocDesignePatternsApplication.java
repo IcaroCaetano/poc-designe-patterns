@@ -66,6 +66,15 @@ public class PocDesignePatternsApplication {
         System.out.println(copy2);
         System.out.println(original == copy1); // false
 
+        // abstract factory
+        PaymentAbstractFactory factory = new StripeFactory();
+
+        PaymentService paymentService = factory.createPaymentService();
+        NotificationService notificationService = factory.createNotificationService();
+
+        paymentService.pay(100.0);
+        notificationService.notifyUser("Payment successful")
+
         // Decorator
         Notifier email = new BaseDecorator();
         Notifier emailAndSms = new SMSNotifier(email);
