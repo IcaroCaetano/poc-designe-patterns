@@ -75,6 +75,19 @@ public class PocDesignePatternsApplication {
         paymentService.pay(100.0);
         notificationService.notifyUser("Payment successful")
 
+        // composite
+        Component file1 = new FileLeaf("file1.txt");
+        Component file2 = new FileLeaf("file2.txt");
+
+        FolderComposite rootFolder = new FolderComposite("root");
+        FolderComposite subFolder = new FolderComposite("documents");
+
+        subFolder.add(file1);
+        subFolder.add(file2);
+
+        rootFolder.add(subFolder);
+        rootFolder.showDetails();
+
         // Decorator
         Notifier email = new BaseDecorator();
         Notifier emailAndSms = new SMSNotifier(email);
