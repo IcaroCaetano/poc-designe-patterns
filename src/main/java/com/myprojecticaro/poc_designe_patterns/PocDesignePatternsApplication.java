@@ -106,6 +106,19 @@ public class PocDesignePatternsApplication {
         
         store.checkout(199.90);
 
+
+        // flyweght
+        Shape red1 = ShapeFactory.getCircle("RED");
+        red1.draw(10, 20);
+
+        Shape red2 = ShapeFactory.getCircle("RED");
+        red2.draw(30, 40);
+
+        Shape blue = ShapeFactory.getCircle("BLUE");
+        blue.draw(50, 60);
+
+        System.out.println(red1 == red2);
+
         // bridge
         Device tv = new TvDevice();
         RemoteControl tvRemote = new AdvancedRemoteControl(tv);
