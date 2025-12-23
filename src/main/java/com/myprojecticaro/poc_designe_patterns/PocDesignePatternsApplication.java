@@ -106,6 +106,20 @@ public class PocDesignePatternsApplication {
         
         store.checkout(199.90);
 
+        // bridge
+        Device tv = new TvDevice();
+        RemoteControl tvRemote = new AdvancedRemoteControl(tv);
+
+        tvRemote.powerOn();
+        ((AdvancedRemoteControl) tvRemote).mute();
+        tvRemote.powerOff();
+    
+        Device radio = new RadioDevice();
+        RemoteControl radioRemote = new AdvancedRemoteControl(radio);
+    
+        radioRemote.powerOn();
+        radioRemote.powerOff();
+        
         // proxy 
         ExpensiveOperation service = new ExpensiveOperationProxy();
 
