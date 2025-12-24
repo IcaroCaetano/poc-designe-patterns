@@ -175,6 +175,21 @@ public class PocDesignePatternsApplication {
         payment.setStrategy(new BoletoPayment());
         payment.executePayment(80.00);    
 
+        // interpreter
+        Context adminContext = new Context(Set.of("READ", "WRITE", "DELETE"));
+
+        Expression read = new PermissionExpression("READ");
+        Expression write = new PermissionExpression("WRITE");
+        Expression delete = new PermissionExpression("DELETE");
+
+        Expression adminRule = new AndExpression(read, new AndExpression(write, delete));
+
+        System.out.println(adminRule.interpret(adminContext));
+
+        Context userContext = new Context(Set.of("READ"));
+
+        System.out.println(adminRule.interpret(userContext))
+
         // Observer
         OrderEventSubject orderSubject = new OrderEventSubject();
         orderSubject.attach(new EmailObserver());
