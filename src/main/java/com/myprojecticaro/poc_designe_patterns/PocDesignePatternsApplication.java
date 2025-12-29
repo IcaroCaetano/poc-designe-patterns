@@ -190,6 +190,18 @@ public class PocDesignePatternsApplication {
 
         System.out.println(adminRule.interpret(userContext))
 
+        // iterator
+        NameCollection collection = new NameCollection();
+        collection.add("Icaro");
+        collection.add("Design");
+        collection.add("Patterns");
+
+        Iterator<String> iterator = collection.createIterator();
+
+        while (iterator.hasNext()) {
+            System.out.println(iterator.next());
+        }
+
         // Observer
         OrderEventSubject orderSubject = new OrderEventSubject();
         orderSubject.attach(new EmailObserver());
