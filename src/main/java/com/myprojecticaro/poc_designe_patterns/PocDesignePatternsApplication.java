@@ -230,6 +230,25 @@ public class PocDesignePatternsApplication {
         AbstractFraudCheck advanced = new AdvancedFraudCheck();
         advanced.process(request);
 
+        // visitor
+        FileElement file1 = new FileElement("file1.txt", 10);
+        FileElement file2 = new FileElement("file2.txt", 20);
+    
+        FolderElement root = new FolderElement("root");
+        FolderElement docs = new FolderElement("docs");
+    
+        docs.add(file1);
+        docs.add(file2);
+        root.add(docs);
+    
+        SizeCalculatorVisitor sizeVisitor = new SizeCalculatorVisitor();
+        root.accept(sizeVisitor);
+    
+        System.out.println("Total size: " + sizeVisitor.getTotalSize());
+    
+        PrintStructureVisitor printVisitor = new PrintStructureVisitor();
+        root.accept(printVisitor);
+
         // Command
         Notifier notifier = new SMSNotifier(
                                 new SlackNotifier(
