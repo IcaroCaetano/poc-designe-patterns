@@ -249,6 +249,26 @@ public class PocDesignePatternsApplication {
         PrintStructureVisitor printVisitor = new PrintStructureVisitor();
         root.accept(printVisitor);
 
+        // memento 
+        TextEditor editor = new TextEditor();
+        History history = new History();
+    
+        editor.write("Version 1");
+        history.save(editor.save());
+    
+        editor.write("Version 2");
+        history.save(editor.save());
+    
+        editor.write("Version 3");
+    
+        System.out.println(editor.getText()); // Version 3
+    
+        editor.restore(history.undo());
+        System.out.println(editor.getText()); // Version 2
+    
+        editor.restore(history.undo());
+        System.out.println(editor.getText()); // Version 1
+
         // Command
         Notifier notifier = new SMSNotifier(
                                 new SlackNotifier(
