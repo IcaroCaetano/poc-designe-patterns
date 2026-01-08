@@ -269,6 +269,19 @@ public class PocDesignePatternsApplication {
         editor.restore(history.undo());
         System.out.println(editor.getText()); // Version 1
 
+        // mediator
+        ChatMediator mediator = new ChatMediatorImpl();
+
+        User icaro = new ChatUser(mediator, "Icaro");
+        User mary = new ChatUser(mediator, "Mary");
+        User john  = new ChatUser(mediator, "John");
+
+        mediator.addUser(icaro);
+        mediator.addUser(mary);
+        mediator.addUser(john);
+
+        icaro.send("Hello everyone!");
+
         // Command
         Notifier notifier = new SMSNotifier(
                                 new SlackNotifier(
