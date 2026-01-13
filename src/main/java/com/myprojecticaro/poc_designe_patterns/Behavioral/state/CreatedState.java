@@ -5,5 +5,10 @@ public class CreatedState implements OrderState {
     public void next(OrderContext context) {
         context.setState(new PaidState());
     }
+
+    @Override
+    public void previous(OrderContext context) {
+        System.out.println("Order is already in initial state");
+    }
 }
 
