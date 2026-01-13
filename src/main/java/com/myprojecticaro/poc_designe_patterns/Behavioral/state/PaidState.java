@@ -5,6 +5,15 @@ public class PaidState implements OrderState {
     public void next(OrderContext context) {
         context.setState(new ShippedState());
     }
+    
+    @Override
+    public void previous(OrderContext context) {
+        context.setState(new CreatedState());
+    }
 
+    @Override
+    public void printStatus() {
+        System.out.println("Order paid");
+    }
 }
 
