@@ -10,5 +10,10 @@ public class CreatedState implements OrderState {
     public void previous(OrderContext context) {
         System.out.println("Order is already in initial state");
     }
+
+    @Override
+    public void printStatus() {
+        System.out.println("Order created");
+    }
 }
 
