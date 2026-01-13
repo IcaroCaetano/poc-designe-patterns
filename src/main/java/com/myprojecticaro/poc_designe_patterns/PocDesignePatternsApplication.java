@@ -249,6 +249,20 @@ public class PocDesignePatternsApplication {
         PrintStructureVisitor printVisitor = new PrintStructureVisitor();
         root.accept(printVisitor);
 
+        // state
+        OrderContext order = new OrderContext();
+
+        order.printStatus(); // Created
+
+        order.next();
+        order.printStatus(); // Paid
+    
+        order.next();
+        order.printStatus(); // Shipped
+    
+        order.previous();
+        order.printStatus(); // Paid
+
         // memento 
         TextEditor editor = new TextEditor();
         History history = new History();
