@@ -8,15 +8,25 @@ The main goal of this project is to explore how classic and enterprise design pa
 
 ## 🎯 Objectives
 
-Demonstrate the use of design patterns in Java applications
+- Demonstrate the use of classic design patterns in Java applications
 
-Apply patterns in a Spring-based environment
+- Apply patterns in a Spring-based environment
 
-Improve code readability, maintainability, and extensibility
+- Improve code readability, maintainability, and extensibility
 
-Serve as a learning reference and architectural playground
+- Serve as a learning reference and architectural playground
 
-This POC implements a real-world scenario: sending notifications through different channels (SMS, Email, Slack, Push Notification), with the option to combine multiple channels together dynamica
+- This POC simulates real-world scenarios such as:
+
+- Notification delivery through multiple channels (SMS, Email, Slack, Push)
+
+- Workflow and state transitions
+
+- Undo/redo mechanisms
+
+- Object creation strategies
+
+- Decoupled communication between components
 
 ## 🛠️ Technologies
 
