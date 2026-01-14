@@ -30,15 +30,15 @@ The main goal of this project is to explore how classic and enterprise design pa
 
 ## 🛠️ Technologies
 
-Java 17+ (or compatible LTS version)
+- Java 17+ (or compatible LTS version)
 
-Spring Framework / Spring Boot
+- Spring Framework / Spring Boot
 
-Maven or Gradle
+- Maven or Gradle
 
-JUnit / Mockito (optional, for testing)
+- JUnit / Mockito (optional, for testing)
 
-(Optional) Access exposed endpoints via Postman or browser.
+- (Optional) Access exposed endpoints via Postman or browser.
 
 
 ## 🧩 Design Patterns Covered
