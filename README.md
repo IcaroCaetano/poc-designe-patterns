@@ -93,6 +93,11 @@ This POC may include (but is not limited to) the following patterns:
 
 - Visitor – Separates algorithms from object structures
 
+- Interpreter - Defines a grammatical representation for a language and interprets expressions.
+
+- Memento - Captures and restores an object’s internal state without violating encapsulation
+(used for undo/rollback scenarios)
+
 ### ▶️ How to Run
 
 Clone the repository:
