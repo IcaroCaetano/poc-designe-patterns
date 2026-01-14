@@ -119,10 +119,28 @@ mvn spring-boot:run
 
 ### 📚 References
 
-Design Patterns: Elements of Reusable Object-Oriented Software (GoF)
+- Design Patterns: Elements of Reusable Object-Oriented Software (GoF)
 
-Spring Framework Documentation
+- Spring Framework Documentation
 
-Clean Code – Robert C. Martin
+- Clean Code – Robert C. Martin
 
-Refactoring Guru – Design Patterns
+- Refactoring Guru – Design Patterns
+
+## ✅ Final Notes
+
+This project is intended as:
+
+- A learning resource
+
+- A technical interview showcase
+
+- A reference for applying patterns with Spring
+
+Each pattern is implemented in isolation and documented to highlight:
+
+- Intent
+
+- Structure
+
+- Real-world applicability
