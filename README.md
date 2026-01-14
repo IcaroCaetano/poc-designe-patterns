@@ -71,6 +71,8 @@ This POC may include (but is not limited to) the following patterns:
 
 - Proxy – Controls access to another object (e.g., caching, security, lazy loading)
 
+- Flyweight - Reduces memory usage by sharing common object state across multiple instances.
+
 ### Behavioral Patterns
 
 - Strategy – Encapsulates interchangeable algorithms
