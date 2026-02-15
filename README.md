@@ -213,9 +213,11 @@ Nada mais muda no código.
 ### 📌 5️⃣ Comportamento FIFO
 Exemplo:
 
+```java
 queue.offer("A");
 queue.offer("B");
 queue.offer("C");
+```
 
 System.out.println(queue.poll());
 Saída:
