@@ -1,4 +1,4 @@
-# Design Patterns
+ # Design Patterns
 
 This repository contains a Proof of Concept (POC) developed with Java and Spring Framework to demonstrate the practical application of software design patterns in a modern, layered, and maintainable architecture.
 
@@ -213,7 +213,7 @@ Nada mais muda no código.
 ### 📌 5️⃣ Comportamento FIFO
 Exemplo:
 
-```java
+```
 queue.offer("A");
 queue.offer("B");
 queue.offer("C");
@@ -232,11 +232,14 @@ Primeiro que entra → Primeiro que sai.
 ### 📌 6️⃣ Internamente (visão estrutural)
 LinkedList usa:
 
+```
 Node {
    element
    next
    previous
 }
+```
+
 Então:
 
 Inserção O(1)
@@ -246,6 +249,7 @@ Remoção O(1) no início
 Acesso por índice é O(n)
 
 ### 📌 7️⃣ Comparação importante
+
 Hoje, na prática moderna, é mais recomendado usar:
 
 Queue<String> queue = new ArrayDeque<>();
@@ -260,6 +264,7 @@ Não sincronizado
 Mais eficiente que LinkedList na maioria dos casos
 
 ### 🧠 Resumo Final
+
 Queue<String> queue = new LinkedList<>();
 Significa:
 
@@ -273,5 +278,6 @@ Boa 👌 essa é uma das operações mais importantes da Queue.
 
 Vamos analisar:
 
+```
 queue.peek();
-
+```
