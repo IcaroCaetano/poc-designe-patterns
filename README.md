@@ -281,3 +281,13 @@ Vamos analisar:
 ```
 queue.peek();
 ```
+
+Significa:
+
+Me mostre quem está na frente da fila, mas não remova.
+
+
+--
+
+
+
