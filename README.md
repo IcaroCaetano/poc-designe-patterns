@@ -187,7 +187,7 @@ Ou seja, ela pode funcionar como:
 
 Aqui você está usando ela como Queue.
 
-📌 3️⃣ O que essa linha faz na prática?
+### 📌 3️⃣ O que essa linha faz na prática?
 Ela cria:
 
 Uma fila FIFO baseada em lista duplamente encadeada.
@@ -200,7 +200,7 @@ Inserção no final é rápida
 
 Remoção no início é rápida
 
-📌 4️⃣ Por que usar assim?
+### 📌 4️⃣ Por que usar assim?
 Porque isso segue o princípio:
 
 Programar para a interface, não para a implementação.
@@ -210,7 +210,7 @@ Se amanhã você quiser trocar:
 Queue<String> queue = new ArrayDeque<>();
 Nada mais muda no código.
 
-📌 5️⃣ Comportamento FIFO
+### 📌 5️⃣ Comportamento FIFO
 Exemplo:
 
 queue.offer("A");
@@ -227,7 +227,7 @@ Porque fila funciona assim:
 Entrada → [A, B, C] → Saída
 Primeiro que entra → Primeiro que sai.
 
-📌 6️⃣ Internamente (visão estrutural)
+### 📌 6️⃣ Internamente (visão estrutural)
 LinkedList usa:
 
 Node {
@@ -243,7 +243,7 @@ Remoção O(1) no início
 
 Acesso por índice é O(n)
 
-📌 7️⃣ Comparação importante
+### 📌 7️⃣ Comparação importante
 Hoje, na prática moderna, é mais recomendado usar:
 
 Queue<String> queue = new ArrayDeque<>();
@@ -257,7 +257,7 @@ Não sincronizado
 
 Mais eficiente que LinkedList na maioria dos casos
 
-🧠 Resumo Final
+### 🧠 Resumo Final
 Queue<String> queue = new LinkedList<>();
 Significa:
 
