@@ -149,3 +149,127 @@ Each pattern is implemented in isolation and documented to highlight:
 Nada mais muda no código.
 
 
+## 📌 1️⃣ O que é Queue<String>?
+Queue é uma interface do pacote:
+
+java.util.Queue
+Ela define o comportamento de uma fila (FIFO — First In, First Out).
+
+Quando você escreve:
+
+Queue<String>
+Você está dizendo:
+
+Quero trabalhar com o contrato de uma fila que armazena Strings.
+
+Você está programando contra a interface, não contra a implementação.
+
+Isso é boa prática de design 👌
+
+### 📌 2️⃣ O que é new LinkedList<>()?
+LinkedList é uma classe concreta que:
+
+```
+Implementa List
+
+Implementa Deque
+
+Implementa Queue
+```
+
+Ou seja, ela pode funcionar como:
+
+- Lista
+
+- Fila
+
+- Pilha
+
+Aqui você está usando ela como Queue.
+
+📌 3️⃣ O que essa linha faz na prática?
+Ela cria:
+
+Uma fila FIFO baseada em lista duplamente encadeada.
+
+Internamente:
+
+Cada elemento aponta para o próximo
+
+Inserção no final é rápida
+
+Remoção no início é rápida
+
+📌 4️⃣ Por que usar assim?
+Porque isso segue o princípio:
+
+Programar para a interface, não para a implementação.
+
+Se amanhã você quiser trocar:
+
+Queue<String> queue = new ArrayDeque<>();
+Nada mais muda no código.
+
+📌 5️⃣ Comportamento FIFO
+Exemplo:
+
+queue.offer("A");
+queue.offer("B");
+queue.offer("C");
+
+System.out.println(queue.poll());
+Saída:
+
+A
+
+Porque fila funciona assim:
+
+Entrada → [A, B, C] → Saída
+Primeiro que entra → Primeiro que sai.
+
+📌 6️⃣ Internamente (visão estrutural)
+LinkedList usa:
+
+Node {
+   element
+   next
+   previous
+}
+Então:
+
+Inserção O(1)
+
+Remoção O(1) no início
+
+Acesso por índice é O(n)
+
+📌 7️⃣ Comparação importante
+Hoje, na prática moderna, é mais recomendado usar:
+
+Queue<String> queue = new ArrayDeque<>();
+Porque:
+
+Melhor performance
+
+Menor overhead de memória
+
+Não sincronizado
+
+Mais eficiente que LinkedList na maioria dos casos
+
+🧠 Resumo Final
+Queue<String> queue = new LinkedList<>();
+Significa:
+
+Estou criando uma fila FIFO de Strings usando uma lista encadeada como implementação.
+
+
+--
+
+
+Boa 👌 essa é uma das operações mais importantes da Queue.
+
+Vamos analisar:
+
+queue.peek();
+
